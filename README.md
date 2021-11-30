@@ -1,4 +1,31 @@
 # aws-terraform-demo
+
+## General Information
+- Small terraform project which covers core functionality of terraform and shows how terraform can be used to prepare and deploy golang functions.
+- Setup 
+    - Api gateway - auhenticate and redirect request to lambda
+    - Api lambda function - process the request and send it to sqs queue
+    - Sqs lambda function - process messages from sqs queue (same message that was send to api gateway) and send it to sns
+
+## Technologies Used
+- Terraform
+- terraform-docs
+- Golang
+
+## Features
+- Terraform lambda module for lambda creation
+- Null provider with provisioner to compile code which triggers on code change
+- Network setup on default vpc to save time, but all comunication between services and lambda uses vpc endpoints
+- Terraform documentation generated with terraform-doc
+
+To do:
+- Create role for every lambda which gives only required access 
+- Create separate vpc instead of using default one
+- Make some resources dynamic in lambda module
+- Add more secure security groups which allow only required traffic
+- Implement aws cognito user pools for api gateway authentification instead IAM
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
