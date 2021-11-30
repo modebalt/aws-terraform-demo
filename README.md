@@ -25,7 +25,7 @@ To do:
 - Add more secure security groups which allow only required traffic
 - Implement aws cognito user pools for api gateway authentification instead IAM
 
-
+# Terraform docs
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
